@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["src/tools/admin"]
+members = [ "src/tasks/2023/day-01", "src/tools/admin"]
 
 [workspace.lints.rust]
 unsafe_code = "forbid"
