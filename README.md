@@ -33,7 +33,7 @@ Advent-of-Code/
 To begin working on the challenges:
 
 1. **Navigate to the Language Folder:** Choose your preferred programming language folder (`python`, `rust`, etc.).
-2. **Start Coding:** Each challenge is organized within the corresponding year and day folder. For instance, for Rust challenges of 2023, navigate to `rust/src/tasks/2023/day-01`.
+2. **Start Coding:** Each challenge is organized within the corresponding year and day folder. For instance, for Rust challenges of 2023.
 3. **Input Storage:** Input files are stored in the `assets` folder within each challenge directory.
 
 ### Obtaining the Session Token
