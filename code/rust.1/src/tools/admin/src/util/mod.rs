@@ -7,7 +7,8 @@ use crate::AdminError;
 
 /// Get environment variable using `dotenv`.
 pub fn get_dotenv(key: &str) -> Result<String, AdminError> {
-    dotenv::var(key).map_err(|_| AdminError::variable_not_set(key))
+    env::var(key).map_err(|_| AdminError::variable_not_set(key))
+    // dotenv::var(key).map_err(|_| AdminError::variable_not_set(key))
 }
 
 /// Get the path to the workspace directory.
