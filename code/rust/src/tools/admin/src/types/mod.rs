@@ -1,5 +1,6 @@
 pub mod aoc;
 pub mod package;
+mod environment;
 
 /// Struct for formatting an incremental package name with leading zeros.
 #[derive(Debug, PartialEq)]
@@ -21,4 +22,12 @@ pub struct AoC {
     pub token: String,
     pub day: u8,
     pub year: u16,
+}
+
+pub struct GlobalEnvironment {
+    pub cargo_meta: cargo_metadata::Metadata,
+    pub workspace: std::path::PathBuf,
+    pub aoc_home: std::path::PathBuf,
+    pub aoc_session_token: String,
+    pub establish_environment: (),
 }

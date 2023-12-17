@@ -1,4 +1,4 @@
-use crate::{get_dotenv, AdminError, AoC};
+use crate::{get_dotenv, AoC, AdminError};
 use chrono::{Datelike, Local};
 use std::{
     fs::{create_dir_all, File},
@@ -68,17 +68,19 @@ impl AoC {
     }
 
     fn get_token(&self) -> Result<String, AdminError> {
-        const EXPECTED_TOKEN_LENGTH: usize = 128;
 
-        if self.token.is_empty() {
-            Err(AdminError::MissingSessionToken())
-        } else if self.token.len() != EXPECTED_TOKEN_LENGTH
-            || !self.token.chars().all(|c| c.is_ascii_hexdigit())
-        {
-            Err(AdminError::InvalidSessionToken(self.token.clone()))
-        } else {
-            Ok(self.token.clone())
-        }
+        Ok(self.token.clone())
+        // const EXPECTED_TOKEN_LENGTH: usize = 128;
+
+        // if self.token.is_empty() {
+        //     Err(AdminError::MissingSessionToken())
+        // } else if self.token.len() != EXPECTED_TOKEN_LENGTH
+        //     || !self.token.chars().all(|c| c.is_ascii_hexdigit())
+        // {
+        //     Err(AdminError::InvalidSessionToken(self.token.clone()))
+        // } else {
+        //     Ok(self.token.clone())
+        // }
     }
 
     fn get_url(&self) -> Result<String, AdminError> {

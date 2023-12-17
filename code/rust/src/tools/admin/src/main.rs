@@ -3,7 +3,7 @@ use std::path::{Path, PathBuf};
 use admin::*;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    dbg!(env_aoc(), env_workspace(), env_assets());
+    hello_from_env();
 
     Ok(())
 }

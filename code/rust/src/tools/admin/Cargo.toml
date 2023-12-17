@@ -16,26 +16,7 @@ once_cell.workspace = true
 lazy_static.workspace = true
 anyhow.workspace = true
 thiserror.workspace = true
-
-[dev-dependencies]
-anyhow.workspace = true
-# # criterion.workspace = true
-# # divan.workspace = true
-# # rstest.workspace = true
-# # test-log.workspace = true
-
-# [[bench]]
-# name = "{{project-name}}-bench"
-# path = "benches/benchmarks.rs"
-# harness = false
-
-# [[bench]]
-# name = "{{project-name}}-bench-criterion"
-# path = "benches/benchmarks-criterion.rs"
-# harness = false
-
-# [features]
-# dhat-heap = []
+walkdir.workspace = true
 
 [lib]
 doctest = false

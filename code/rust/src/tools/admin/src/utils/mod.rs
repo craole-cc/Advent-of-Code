@@ -1,3 +1,7 @@
+pub mod print;
+
+pub use print::*;
+
 use std::{
     env,
     path::{Path, PathBuf}, process,

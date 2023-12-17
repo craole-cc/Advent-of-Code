@@ -39,3 +39,4 @@ thiserror = "1.0.50"
 # test-log = { version = "0.2.13", default-features = false, features = [
 #     "trace",
 # ] }
+walkdir = "2"
