@@ -10,19 +10,20 @@ Welcome to the Advent of Code repository—an exhilarating journey designed to e
 
 The repository structure is organized by programming languages and challenge tasks:
 
-```plaintext
+```sh
 Advent-of-Code/
 |-- rust/
 |   |-- src/
 |       |-- tasks/
 |           |-- 2023/
-|               |-- day-01/
+|               |-- 01/
 |                   |-- Cargo.toml
 |                   |-- src/
 |                   |   |-- main.rs
 |                       |-- ...
 |                   |-- assets/
 |                       |-- input.txt
+|                       |-- instructions.txt
 |                       |-- output.txt
 |                       |-- ...
 |-- ...
