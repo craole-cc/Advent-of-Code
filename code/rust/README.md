@@ -1,19 +1,39 @@
-# Advent of Code: Rust Edition
+# Rust Workspace
 
-Welcome to the Rust edition of Advent of Code! This repository is dedicated to honing Rust programming skills through the exploration of Advent of Code challenges.
+A Rust workspace with multiple crates.
 
-## Challenges
+## Structure
 
-- [ ] 2023
-  - [ ] Day 01
-    - [ ] Part 1
-    - [ ] Part 2
-  - [ ] Day 02
-    - [ ] Part 1
-    - [ ] Part 2
-  - [ ] ...
+```
+.
+├── Cargo.toml          # Workspace configuration
+├── crates/             # Workspace members
+│   ├── crate-one/
+│   └── crate-two/
+└── ...
+```
 
-## Getting Started
+## Quick Start
 
-1. **Run Challenges:** Execute challenges using `cargo run`.
-2. **Input Storage:** Input files are stored in the `assets` folder within each challenge directory.
+```bash
+# Create a new crate
+mise run new-crate my-crate
+
+# Run tests for all crates
+cargo test --workspace
+
+# Run a specific crate
+cargo run -p crate-name
+```
+
+## Development
+
+- **Watch mode**: `mise run dev`
+- **Test all**: `mise run test`
+- **Format**: `mise run fmt`
+- **Check**: `mise run check`
+
+## License
+
+MIT OR Apache-2.0
+
