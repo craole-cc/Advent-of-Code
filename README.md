@@ -61,16 +61,16 @@ Advent-of-Code/
 
 ## Quick Examples
 
-### Fetch today's puzzle
+### Fetch the most recent puzzle
 
 ```sh
-./scripts/fetch-aoc.sh 2024 $(date +%d)
+./scripts/fetch-aoc.sh 2024 latest
 ```
 
 ### Fetch all puzzles for a year
 
 ```sh
-./scripts/fetch-aoc-batch.sh 2023
+./scripts/fetch-aoc.sh 2023
 ```
 
 ### Run a Rust solution
