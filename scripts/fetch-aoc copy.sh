@@ -795,15 +795,12 @@ fetch_all_missing_data() {
 
 	for year in $(seq "${FIRST_YEAR}" "${max_year}"); do
 		#> Determine days to check for this year
-		#? Always detect actual days except during December for current calendar year
-		current_year=$(date -u +%Y)
-		current_month=$(date -u +%m)
-
-		if [ "${year}" -eq "${current_year}" ] && [ "${current_month}" -eq 12 ]; then
-			#> During December of current year, use time-based calculation
+		# For current year, use the passed max_day
+		# For past years, detect actual available days
+		if [ "${year}" -eq "${max_year}" ]; then
 			end_day="${max_day}"
 		else
-			#> For all other cases, detect actual available days from server
+			# Detect actual max day for this year (handles special cases like 2025 with 12 days)
 			end_day=$(detect_year_max_day "${year}" "${session_key}")
 			log_info "Year ${year} has ${end_day} days available"
 		fi
