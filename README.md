@@ -64,7 +64,7 @@ Advent-of-Code/
 ### Fetch the most recent puzzle
 
 ```sh
-./scripts/fetch-aoc.sh 2024 latest
+./scripts/fetch-aoc.sh latest
 ```
 
 ### Fetch all puzzles for a year
