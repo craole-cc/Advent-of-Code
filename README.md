@@ -18,7 +18,8 @@ mkdir -p .env
 echo "YOUR_SESSION_COOKIE" > .env/session.key
 
 # 3. Fetch AoC data
-./scripts/fetch-aoc.sh
+fetcher=./scripts/fetch-aoc.sh
+sh "${fetcher}"
 
 # 4. Start coding!
 language='rust'   # or shellscript, python, zig, etc.
@@ -46,7 +47,7 @@ Advent-of-Code/
 ### Project-specific
 
 - 📚 [Getting Started](documentation/getting-started.md) - Setup and first steps
-- 🔍 [Fetching Assets](documentation/fetching-data.md) - How to download puzzle inputs
+- 🔍 [Fetching Puzzles](documentation/fetching-data.md) - How to download puzzle inputs
 - 🤝 [Contributing](CONTRIBUTING.md) - How to contribute
 
 ### Language-specific
@@ -64,13 +65,13 @@ Advent-of-Code/
 ### Fetch the most recent puzzle
 
 ```sh
-./scripts/fetch-aoc.sh latest
+sh "${fetcher}" latest
 ```
 
 ### Fetch all puzzles for a year
 
 ```sh
-./scripts/fetch-aoc.sh 2023
+sh "${fetcher}" 2023
 ```
 
 ### Run a Rust solution
