@@ -14,14 +14,15 @@ git clone https://github.com/craole-cc/Advent-of-Code.git
 cd Advent-of-Code
 
 # 2. Set up your session key
-mkdir -p assets/keys
-echo "YOUR_SESSION_COOKIE" > assets/keys/session.key
+mkdir -p .env
+echo "YOUR_SESSION_COOKIE" > .env/session.key
 
-# 3. Fetch a puzzle
-./scripts/fetch-aoc.sh 2024 1
+# 3. Fetch AoC data
+./scripts/fetch-aoc.sh
 
 # 4. Start coding!
-cd code/rust  # or shellscript, python, zig, etc.
+language='rust'   # or shellscript, python, zig, etc.
+cd "code/${language}"
 ```
 
 ## Project Structure
@@ -46,7 +47,7 @@ Advent-of-Code/
 
 - 📚 [Getting Started](documentation/getting-started.md) - Setup and first steps
 - 🔍 [Fetching Assets](documentation/fetching-data.md) - How to download puzzle inputs
-- 🤝 [Contributing](contributing.md) - How to contribute
+- 🤝 [Contributing](CONTRIBUTING.md) - How to contribute
 
 ### Language-specific
 
