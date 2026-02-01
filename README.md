@@ -46,7 +46,7 @@ Advent-of-Code/
 
 - 📚 [Getting Started](documentation/getting-started.md) - Setup and first steps
 - 🔍 [Fetching Assets](documentation/fetching-data.md) - How to download puzzle inputs
-- 🤝 [Contributing](documentation/contributing.md) - How to contribute
+- 🤝 [Contributing](contributing.md) - How to contribute
 
 ### Language-specific
 
