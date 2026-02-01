@@ -2,5 +2,9 @@
   "editor.inlayHints.enabled": "offUnlessPressed",
   "rust-analyzer.linkedProjects": [
     "code/rust/Cargo.toml"
+  ],
+  "fileinator.ignoredFolders": [
+    "code/rust/.direnv",
+    "code/rust/.envrc",
   ]
 }

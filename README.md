@@ -6,96 +6,105 @@ Welcome to the Advent of Code repository—an exhilarating journey designed to e
 
 [Advent of Code](https://adventofcode.com/) is an annual event that takes place in December, where participants tackle daily coding challenges. Each day leading up to Christmas, a new programming puzzle is released, encouraging participants to explore and enhance their problem-solving skills.
 
-## Project Structure
+## Quick Start
 
-The repository structure is organized by programming languages and challenge tasks:
+```sh
+# 1. Clone the repository
+git clone https://github.com/craole-cc/Advent-of-Code.git
+cd Advent-of-Code
+
+# 2. Set up your session key
+mkdir -p assets/keys
+echo "YOUR_SESSION_COOKIE" > assets/keys/session.key
+
+# 3. Fetch a puzzle
+./scripts/fetch-aoc.sh 2024 1
+
+# 4. Start coding!
+cd code/rust  # or shellscript, python, zig, etc.
+```
+
+## Project Structure
 
 ```sh
 Advent-of-Code/
-|-- rust/
-|   |-- src/
-|       |-- tasks/
-|           |-- 2023/
-|               |-- 01/
-|                   |-- Cargo.toml
-|                   |-- src/
-|                   |   |-- main.rs
-|                       |-- ...
-|                   |-- assets/
-|                       |-- input.txt
-|                       |-- instructions.txt
-|                       |-- output.txt
-|                       |-- ...
-|-- ...
+├── assets    # Shared puzzle data
+├── code      # Solutions
+│   ├── rust
+│   ├── python
+│   ├── shellscript
+│   ├── zig
+│   └── ... # Other languages
+├── documentation
+├── scripts   # Common utilities
+└── README.md
 ```
 
-### Getting Started
+## Documentation
 
-To begin working on the challenges:
+### Project-specific
 
-1. **Navigate to the Language Folder:** Choose your preferred programming language folder (`python`, `rust`, etc.) in the code folder.
-2. **Start Coding:** Each challenge is organized within the corresponding year and day folder. For instance, for Rust challenges of 2023.
-3. **Input Storage:** Input files are stored in the `assets` folder within each challenge directory.
+- 📚 [Getting Started](documentation/getting-started.md) - Setup and first steps
+- 🔍 [Fetching Assets](documentation/fetching-data.md) - How to download puzzle inputs
+- 🤝 [Contributing](documentation/contributing.md) - How to contribute
 
-### Obtaining the Session Token
+### Language-specific
 
-Before you start, ensure you have the `AOC_SESSION_TOKEN` environment variable set. Follow these steps to obtain the token:
+- [x] 🦀 [Rust](code/rust/README.md)
+- [ ] 🐚 [ShellScript](code/shellscript/README.md)
+- [ ] 🐍 Python
+- [ ] ⚡ Zig
+- [ ] TypeScript
+- [ ] Go
+- [ ] Other languages - Open to contributions!
 
-1. **Access Developer Tools:**
-   - Open the developer tools in your browser using either:
-      - Windows: `F12` or `Ctrl + Shift + J`
-      - MacOS  : `Cmd + Option + I`
-   - Alternatively, right-click on the webpage and select "Inspect."
+## Quick Examples
 
-2. **Navigate to the 'Applications' Tab:**
-   - Within the developer tools, locate and click on the 'Applications' tab.
+### Fetch today's puzzle
 
-3. **Explore the 'Storage' Section:**
-   - Look for the 'Storage' section in the left-hand sidebar of the 'Applications' tab.
+```sh
+./scripts/fetch-aoc.sh 2024 $(date +%d)
+```
 
-4. **Access the 'Cookies' Dropdown:**
-   - Under 'Storage,' find and click on 'Cookies' in the left-hand sidebar.
+### Fetch all puzzles for a year
 
-5. **Select Advent of Code Website:**
-   - In the 'Cookies' dropdown, choose '<https://adventofcode.com/>' to view the site-specific cookies.
+```sh
+./scripts/fetch-aoc-batch.sh 2023
+```
 
-6. **Copy Session Token:**
-   - Find the 'session' cookie in the list. Copy the value of this cookie; this is your `AOC_SESSION_TOKEN`.
+### Run a Rust solution
 
-7. **Set Environment Variable:**
-   - Set the value of `AOC_SESSION_TOKEN` as an environment variable in a `.env` file at the root of this repository or as a shell environment variable.
+```sh
+cd code/rust
+cargo run --bin 2024-01
+```
 
-This token allows access to the Advent of Code API for retrieving challenge inputs.
+## Features
 
-### Managing Code
+- ✨ **Language-Agnostic Assets** - Fetch once, use everywhere
+- 🚀 **POSIX Scripts** - Works on Linux, macOS, BSD, WSL
+- 📦 **Organized Structure** - Clear separation of concerns
+- 🔧 **CLI Tools** - Admin utilities for project management
+- 🎯 **Zero Dependencies** - Core scripts use only `curl`
 
-All code management, builds, and executions should be performed from the root of the language folder. For Rust, you can execute code using `cargo run`.
+## Community & Support
 
-### Roadmap
+- 🐛 [Report Issues](../../issues)
+- 💡 [Request Features](../../issues/new)
+- 🌟 [Star this repo](../../stargazers) if you find it helpful!
 
-The roadmap for this project includes:
+## Credits
 
-- [ ] Explore challenges in multiple languages:
-  - [x] Rust
-  - [ ] Python
-  - [ ] TypeScript
-  - [ ] Kotlin
-  - [ ] Go
-  - [ ] Ruby
-  - [ ] Scala
-  - [ ] Red
-  - [ ] Crystal
-- [ ] Work on challenges present, past, and future
-- [ ] Develop a Frontend Management App for better organization and accessibility.
+- **[Advent of Code](https://adventofcode.com/)** by [Eric Wastl](http://was.tl/)
 
-### Contributing
+## License
 
-Contributions are welcome! Feel free to add solutions in different programming languages or improve existing solutions. Ensure your code is organized within the language-specific folders and follows best practices.
+This project is open source. Please respect the Advent of Code community guidelines:
 
-### Disclaimer
+- Don't spoil puzzles for others
+- Don't automate submissions
+- Credit Advent of Code when sharing
 
-The repository is designed to explore and practice coding skills. Please refrain from sharing specific challenge solutions, respecting the Advent of Code's spirit of learning and problem-solving.
+---
 
-### Credits
-
-Advent of Code - [Official Website](https://adventofcode.com/)
+> *"The best way to learn is by doing."*

@@ -216,7 +216,7 @@
 
         ## Structure
 
-        ```
+        ```sh
         .
         ├── Cargo.toml          # Workspace configuration
         ├── crates/             # Workspace members
@@ -227,7 +227,7 @@
 
         ## Quick Start
 
-        ```bash
+        ```sh
         # Create a new crate
         mise run new-crate my-crate
 
