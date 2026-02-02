@@ -1,0 +1,16 @@
+[package]
+name = "aoc-graph"
+default-run = "aoc-graph"
+description = "Advent of Code - Graphing Utilities"
+authors = { workspace = true }
+edition = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+repository = { workspace = true }
+version = { workspace = true }
+categories = { workspace = true }
+keywords = { workspace = true }
+
+[dependencies]
+miette = { workspace = true }
+thiserror = { workspace = true }

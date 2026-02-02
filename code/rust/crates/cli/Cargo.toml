@@ -1,0 +1,48 @@
+[package]
+name = "cli"
+default-run = "cli"
+description = "CLI for managing the Advent of Code"
+authors = { workspace = true }
+edition = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+repository = { workspace = true }
+version = { workspace = true }
+keywords = { workspace = true }
+categories = ["command-line-utilities"]
+
+[dependencies]
+# -- Internal
+env = { workspace = true }
+# macros = { workspace = true, optional = true }
+
+# -- Argument Parsing
+clap = { workspace = true }
+
+# -- Error Handling
+miette = { workspace = true }
+thiserror = { workspace = true }
+
+# -- Async Runtime
+# tokio = { workspace = true }
+
+[features]
+default = [
+  "derive",
+  "fmt",
+  #
+]
+derive = [
+  "env/derive",
+  "miette/derive",
+  "clap/derive",
+  #
+]
+fmt = [
+  "env/fmt",
+  "miette/fancy",
+  #
+]
+
+[lints]
+workspace = true

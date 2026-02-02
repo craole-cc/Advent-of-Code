@@ -6,5 +6,6 @@
   "fileinator.ignoredFolders": [
     "code/rust/.direnv",
     "code/rust/.envrc",
+    "code/rust/crates/lib"
   ]
 }

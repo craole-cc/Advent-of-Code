@@ -1,6 +1,8 @@
 # Advent of Code: Rust Edition
 
-Welcome to the Rust edition of Advent of Code! This repository is dedicated to honing Rust programming skills through the exploration of Advent of Code challenges.
+Welcome to the Rust edition of Advent of Code! This repository is dedicated to
+honing Rust programming skills through the exploration of Advent of Code
+challenges.
 
 ## Structure
 
@@ -80,7 +82,8 @@ cargo run -p crate-name
 ```
 
 1. **Run Challenges:** Execute challenges using `cargo run`.
-2. **Input Storage:** Input files are stored in the `assets` folder within each challenge directory.
+2. **Input Storage:** Input files are stored in the `assets` folder within each
+   challenge directory.
 
 ## Development
 

@@ -751,7 +751,7 @@ fetch_single_data() {
 
 	#> Define file paths
 	input_file="${day_dir}/input.txt"
-	instructions_file="${day_dir}/instructions.txt"
+	instructions_file="${day_dir}/instructions.html"
 	output_file="${day_dir}/output.txt"
 
 	#> Fetch assets - track failures but don't exit immediately
